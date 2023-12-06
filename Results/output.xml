@@ -1,44 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231206 18:32:06.726" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231206 22:27:57.374" rpa="false" schemaversion="4">
 <suite id="s1" name="Main" source="C:\Users\krist\PycharmProjects\KristopherPepperSiteTests\tests\Main.robot">
-<test id="s1-t1" name="Home page should be running" line="11">
+<test id="s1-t1" name="Test initialization" line="11">
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>.2s</arg>
+<arg>.5s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20231206 18:32:07.054" endtime="20231206 18:32:07.054"/>
+<status status="PASS" starttime="20231206 22:27:57.710" endtime="20231206 22:27:57.710"/>
 </kw>
 <kw name="Set Selenium Timeout" library="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" starttime="20231206 18:32:07.054" endtime="20231206 18:32:07.054"/>
+<status status="PASS" starttime="20231206 22:27:57.710" endtime="20231206 22:27:57.710"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>Starting the test case!</arg>
+<arg>Tests that the home page is running and functioning properly.</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231206 18:32:07.054" level="INFO">Starting the test case!</msg>
-<status status="PASS" starttime="20231206 18:32:07.054" endtime="20231206 18:32:07.054"/>
+<msg timestamp="20231206 22:27:57.710" level="INFO">Tests that the home page is running and functioning properly.</msg>
+<status status="PASS" starttime="20231206 22:27:57.710" endtime="20231206 22:27:57.710"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://kristopherpepper.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231206 18:32:07.054" level="INFO">Opening browser 'chrome' to base url 'https://kristopherpepper.com/'.</msg>
-<status status="PASS" starttime="20231206 18:32:07.054" endtime="20231206 18:32:14.291"/>
+<msg timestamp="20231206 22:27:57.710" level="INFO">Opening browser 'chrome' to base url 'https://kristopherpepper.com/'.</msg>
+<status status="PASS" starttime="20231206 22:27:57.710" endtime="20231206 22:28:04.777"/>
 </kw>
-<doc>Tests that the home page is running</doc>
-<status status="PASS" starttime="20231206 18:32:07.054" endtime="20231206 18:32:14.292"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231206 22:28:04.777" endtime="20231206 22:28:05.402"/>
+</kw>
+<status status="PASS" starttime="20231206 22:27:57.710" endtime="20231206 22:28:05.403"/>
 </test>
-<doc>Tests that the home page is running and functioning properly</doc>
-<status status="PASS" starttime="20231206 18:32:06.726" endtime="20231206 18:32:14.292"/>
+<test id="s1-t2" name="Page Navigation Links" line="19">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Kristopher Pepper</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231206 22:28:06.439" level="INFO">Current page contains text 'Kristopher Pepper'.</msg>
+<status status="PASS" starttime="20231206 22:28:05.405" endtime="20231206 22:28:06.439"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Photography</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231206 22:28:07.472" level="INFO">Current page contains text 'Photography'.</msg>
+<status status="PASS" starttime="20231206 22:28:06.439" endtime="20231206 22:28:07.472"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Coding</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231206 22:28:08.505" level="INFO">Current page contains text 'Coding'.</msg>
+<status status="PASS" starttime="20231206 22:28:07.472" endtime="20231206 22:28:08.505"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>About</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231206 22:28:09.538" level="INFO">Current page contains text 'About'.</msg>
+<status status="PASS" starttime="20231206 22:28:08.505" endtime="20231206 22:28:09.538"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Contact Kris</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231206 22:28:10.572" level="INFO">Current page contains text 'Contact Kris'.</msg>
+<status status="PASS" starttime="20231206 22:28:09.538" endtime="20231206 22:28:10.572"/>
+</kw>
+<status status="PASS" starttime="20231206 22:28:05.404" endtime="20231206 22:28:10.572"/>
+</test>
+<test id="s1-t3" name="Image Carousel" line="26">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@aria-label='Previous Slide']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 22:28:10.575" level="INFO">Clicking element 'xpath=//a[@aria-label='Previous Slide']'.</msg>
+<status status="PASS" starttime="20231206 22:28:10.575" endtime="20231206 22:28:11.700"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@aria-label='Next Slide']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 22:28:11.700" level="INFO">Clicking element 'xpath=//a[@aria-label='Next Slide']'.</msg>
+<status status="PASS" starttime="20231206 22:28:11.700" endtime="20231206 22:28:12.802"/>
+</kw>
+<status status="PASS" starttime="20231206 22:28:10.572" endtime="20231206 22:28:12.802"/>
+</test>
+<test id="s1-t4" name="Social Links" line="30">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@href='https://www.linkedin.com/in/kristopher-pepper-824184136']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 22:28:12.802" level="INFO">Clicking element 'xpath=//a[@href='https://www.linkedin.com/in/kristopher-pepper-824184136']'.</msg>
+<status status="PASS" starttime="20231206 22:28:12.802" endtime="20231206 22:28:14.004"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@href='https://www.shutterstock.com/g/Kristopher+Pepper?rid=263519982']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 22:28:14.004" level="INFO">Clicking element 'xpath=//a[@href='https://www.shutterstock.com/g/Kristopher+Pepper?rid=263519982']'.</msg>
+<status status="PASS" starttime="20231206 22:28:14.004" endtime="20231206 22:28:15.179"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@href='https://www.youtube.com/channel/UC_3Et-wk6h3X_BfursY-ITA/featured']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 22:28:15.183" level="INFO">Clicking element 'xpath=//a[@href='https://www.youtube.com/channel/UC_3Et-wk6h3X_BfursY-ITA/featured']'.</msg>
+<status status="PASS" starttime="20231206 22:28:15.182" endtime="20231206 22:28:16.426"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@href='https://github.com/KrisHHFI']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231206 22:28:16.436" level="INFO">Clicking element 'xpath=//a[@href='https://github.com/KrisHHFI']'.</msg>
+<status status="PASS" starttime="20231206 22:28:16.435" endtime="20231206 22:28:18.092"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231206 22:28:18.092" endtime="20231206 22:28:21.375"/>
+</kw>
+<status status="PASS" starttime="20231206 22:28:12.802" endtime="20231206 22:28:21.375"/>
+</test>
+<doc>Tests for kristopherpepper.com</doc>
+<status status="PASS" starttime="20231206 22:27:57.374" endtime="20231206 22:28:21.375"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Main">Main</stat>
+<stat pass="4" fail="0" skip="0" id="s1" name="Main">Main</stat>
 </suite>
 </statistics>
 <errors>
