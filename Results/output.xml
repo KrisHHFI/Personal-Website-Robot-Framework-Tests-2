@@ -1,128 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231206 22:27:57.374" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231208 22:16:44.755" rpa="false" schemaversion="4">
 <suite id="s1" name="Main" source="C:\Users\krist\PycharmProjects\KristopherPepperSiteTests\tests\Main.robot">
-<test id="s1-t1" name="Test initialization" line="11">
+<test id="s1-t1" name="Test initialization" line="13">
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>.5s</arg>
+<arg>.1s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20231206 22:27:57.710" endtime="20231206 22:27:57.710"/>
+<status status="PASS" starttime="20231208 22:16:45.099" endtime="20231208 22:16:45.115"/>
 </kw>
 <kw name="Set Selenium Timeout" library="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" starttime="20231206 22:27:57.710" endtime="20231206 22:27:57.710"/>
+<status status="PASS" starttime="20231208 22:16:45.115" endtime="20231208 22:16:45.115"/>
 </kw>
-<kw name="Log" library="BuiltIn">
-<arg>Tests that the home page is running and functioning properly.</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20231206 22:27:57.710" level="INFO">Tests that the home page is running and functioning properly.</msg>
-<status status="PASS" starttime="20231206 22:27:57.710" endtime="20231206 22:27:57.710"/>
-</kw>
+<status status="PASS" starttime="20231208 22:16:45.099" endtime="20231208 22:16:45.115"/>
+</test>
+<test id="s1-t2" name="Tests" line="17">
+<kw name="Test initialization" library="HeaderAndFooter">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://kristopherpepper.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231206 22:27:57.710" level="INFO">Opening browser 'chrome' to base url 'https://kristopherpepper.com/'.</msg>
-<status status="PASS" starttime="20231206 22:27:57.710" endtime="20231206 22:28:04.777"/>
+<msg timestamp="20231208 22:16:45.115" level="INFO">Opening browser 'chrome' to base url 'https://kristopherpepper.com/'.</msg>
+<msg timestamp="20231208 22:16:45.925" level="WARN">The chromedriver version (120.0.6099.62) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.63); currently, chromedriver 120.0.6099.71 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20231208 22:16:45.115" endtime="20231208 22:16:52.265"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231206 22:28:04.777" endtime="20231206 22:28:05.402"/>
+<status status="PASS" starttime="20231208 22:16:52.265" endtime="20231208 22:16:52.517"/>
 </kw>
-<status status="PASS" starttime="20231206 22:27:57.710" endtime="20231206 22:28:05.403"/>
-</test>
-<test id="s1-t2" name="Page Navigation Links" line="19">
+<status status="PASS" starttime="20231208 22:16:45.115" endtime="20231208 22:16:52.517"/>
+</kw>
+<kw name="Page navigation links" library="HeaderAndFooter">
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Kristopher Pepper</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231206 22:28:06.439" level="INFO">Current page contains text 'Kristopher Pepper'.</msg>
-<status status="PASS" starttime="20231206 22:28:05.405" endtime="20231206 22:28:06.439"/>
+<msg timestamp="20231208 22:16:52.851" level="INFO">Current page contains text 'Kristopher Pepper'.</msg>
+<status status="PASS" starttime="20231208 22:16:52.517" endtime="20231208 22:16:52.851"/>
 </kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Photography</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231206 22:28:07.472" level="INFO">Current page contains text 'Photography'.</msg>
-<status status="PASS" starttime="20231206 22:28:06.439" endtime="20231206 22:28:07.472"/>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>//*[@id="topNav"]/nav/ul/li[1]/a</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20231208 22:16:52.855" level="INFO">Simulating Mouse Over on element '//*[@id="topNav"]/nav/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20231208 22:16:52.851" endtime="20231208 22:16:53.435"/>
 </kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Coding</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231206 22:28:08.505" level="INFO">Current page contains text 'Coding'.</msg>
-<status status="PASS" starttime="20231206 22:28:07.472" endtime="20231206 22:28:08.505"/>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>//*[@id="topNav"]/nav/ul/li[2]/a</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20231208 22:16:53.438" level="INFO">Simulating Mouse Over on element '//*[@id="topNav"]/nav/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20231208 22:16:53.435" endtime="20231208 22:16:54.010"/>
 </kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>About</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231206 22:28:09.538" level="INFO">Current page contains text 'About'.</msg>
-<status status="PASS" starttime="20231206 22:28:08.505" endtime="20231206 22:28:09.538"/>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>//*[@id="topNav"]/nav/ul/li[3]/a</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20231208 22:16:54.010" level="INFO">Simulating Mouse Over on element '//*[@id="topNav"]/nav/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20231208 22:16:54.010" endtime="20231208 22:16:54.573"/>
 </kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Contact Kris</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231206 22:28:10.572" level="INFO">Current page contains text 'Contact Kris'.</msg>
-<status status="PASS" starttime="20231206 22:28:09.538" endtime="20231206 22:28:10.572"/>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>//*[@id="topNav"]/nav/ul/li[4]/a</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20231208 22:16:54.573" level="INFO">Simulating Mouse Over on element '//*[@id="topNav"]/nav/ul/li[4]/a'.</msg>
+<status status="PASS" starttime="20231208 22:16:54.573" endtime="20231208 22:16:55.143"/>
 </kw>
-<status status="PASS" starttime="20231206 22:28:05.404" endtime="20231206 22:28:10.572"/>
-</test>
-<test id="s1-t3" name="Image Carousel" line="26">
+<status status="PASS" starttime="20231208 22:16:52.517" endtime="20231208 22:16:55.143"/>
+</kw>
+<kw name="Social links" library="HeaderAndFooter">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath=//a[@href='https://www.linkedin.com/in/kristopher-pepper-824184136']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20231208 22:16:55.143" level="INFO">Simulating Mouse Over on element 'xpath=//a[@href='https://www.linkedin.com/in/kristopher-pepper-824184136']'.</msg>
+<status status="PASS" starttime="20231208 22:16:55.143" endtime="20231208 22:16:55.666"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath=//a[@href='https://www.shutterstock.com/g/Kristopher+Pepper?rid=263519982']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20231208 22:16:55.666" level="INFO">Simulating Mouse Over on element 'xpath=//a[@href='https://www.shutterstock.com/g/Kristopher+Pepper?rid=263519982']'.</msg>
+<status status="PASS" starttime="20231208 22:16:55.666" endtime="20231208 22:16:56.231"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath=//a[@href='https://www.youtube.com/channel/UC_3Et-wk6h3X_BfursY-ITA/featured']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20231208 22:16:56.231" level="INFO">Simulating Mouse Over on element 'xpath=//a[@href='https://www.youtube.com/channel/UC_3Et-wk6h3X_BfursY-ITA/featured']'.</msg>
+<status status="PASS" starttime="20231208 22:16:56.231" endtime="20231208 22:16:56.808"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath=//a[@href='https://github.com/KrisHHFI']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20231208 22:16:56.808" level="INFO">Simulating Mouse Over on element 'xpath=//a[@href='https://github.com/KrisHHFI']'.</msg>
+<status status="PASS" starttime="20231208 22:16:56.808" endtime="20231208 22:16:57.357"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231208 22:16:57.357" endtime="20231208 22:16:59.678"/>
+</kw>
+<status status="PASS" starttime="20231208 22:16:55.143" endtime="20231208 22:16:59.678"/>
+</kw>
+<kw name="Test Initialization" library="HomePageTests">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://kristopherpepper.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231208 22:16:59.678" level="INFO">Opening browser 'chrome' to base url 'https://kristopherpepper.com/'.</msg>
+<msg timestamp="20231208 22:17:00.396" level="WARN">The chromedriver version (120.0.6099.62) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.63); currently, chromedriver 120.0.6099.71 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20231208 22:16:59.678" endtime="20231208 22:17:04.750"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231208 22:17:04.750" endtime="20231208 22:17:06.502"/>
+</kw>
+<status status="PASS" starttime="20231208 22:16:59.678" endtime="20231208 22:17:06.502"/>
+</kw>
+<kw name="Image Carousel" library="HomePageTests">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//a[@aria-label='Previous Slide']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231206 22:28:10.575" level="INFO">Clicking element 'xpath=//a[@aria-label='Previous Slide']'.</msg>
-<status status="PASS" starttime="20231206 22:28:10.575" endtime="20231206 22:28:11.700"/>
+<msg timestamp="20231208 22:17:06.504" level="INFO">Clicking element 'xpath=//a[@aria-label='Previous Slide']'.</msg>
+<status status="PASS" starttime="20231208 22:17:06.504" endtime="20231208 22:17:06.931"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//a[@aria-label='Next Slide']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231206 22:28:11.700" level="INFO">Clicking element 'xpath=//a[@aria-label='Next Slide']'.</msg>
-<status status="PASS" starttime="20231206 22:28:11.700" endtime="20231206 22:28:12.802"/>
-</kw>
-<status status="PASS" starttime="20231206 22:28:10.572" endtime="20231206 22:28:12.802"/>
-</test>
-<test id="s1-t4" name="Social Links" line="30">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//a[@href='https://www.linkedin.com/in/kristopher-pepper-824184136']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231206 22:28:12.802" level="INFO">Clicking element 'xpath=//a[@href='https://www.linkedin.com/in/kristopher-pepper-824184136']'.</msg>
-<status status="PASS" starttime="20231206 22:28:12.802" endtime="20231206 22:28:14.004"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//a[@href='https://www.shutterstock.com/g/Kristopher+Pepper?rid=263519982']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231206 22:28:14.004" level="INFO">Clicking element 'xpath=//a[@href='https://www.shutterstock.com/g/Kristopher+Pepper?rid=263519982']'.</msg>
-<status status="PASS" starttime="20231206 22:28:14.004" endtime="20231206 22:28:15.179"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//a[@href='https://www.youtube.com/channel/UC_3Et-wk6h3X_BfursY-ITA/featured']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231206 22:28:15.183" level="INFO">Clicking element 'xpath=//a[@href='https://www.youtube.com/channel/UC_3Et-wk6h3X_BfursY-ITA/featured']'.</msg>
-<status status="PASS" starttime="20231206 22:28:15.182" endtime="20231206 22:28:16.426"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//a[@href='https://github.com/KrisHHFI']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231206 22:28:16.436" level="INFO">Clicking element 'xpath=//a[@href='https://github.com/KrisHHFI']'.</msg>
-<status status="PASS" starttime="20231206 22:28:16.435" endtime="20231206 22:28:18.092"/>
+<msg timestamp="20231208 22:17:06.931" level="INFO">Clicking element 'xpath=//a[@aria-label='Next Slide']'.</msg>
+<status status="PASS" starttime="20231208 22:17:06.931" endtime="20231208 22:17:07.253"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231206 22:28:18.092" endtime="20231206 22:28:21.375"/>
+<status status="PASS" starttime="20231208 22:17:07.253" endtime="20231208 22:17:09.553"/>
 </kw>
-<status status="PASS" starttime="20231206 22:28:12.802" endtime="20231206 22:28:21.375"/>
+<status status="PASS" starttime="20231208 22:17:06.502" endtime="20231208 22:17:09.553"/>
+</kw>
+<status status="PASS" starttime="20231208 22:16:45.115" endtime="20231208 22:17:09.553"/>
 </test>
 <doc>Tests for kristopherpepper.com</doc>
-<status status="PASS" starttime="20231206 22:27:57.374" endtime="20231206 22:28:21.375"/>
+<status status="PASS" starttime="20231208 22:16:44.755" endtime="20231208 22:17:09.553"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="4" fail="0" skip="0" id="s1" name="Main">Main</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Main">Main</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20231208 22:16:45.925" level="WARN">The chromedriver version (120.0.6099.62) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.63); currently, chromedriver 120.0.6099.71 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20231208 22:17:00.396" level="WARN">The chromedriver version (120.0.6099.62) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.63); currently, chromedriver 120.0.6099.71 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
