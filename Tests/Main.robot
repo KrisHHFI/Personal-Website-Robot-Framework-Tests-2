@@ -1,16 +1,15 @@
 # The main project file
 
-#Run the script:
-#robot -d results tests/Main.robot
+#Run the script: robot -d results tests/Main.robot
 
 *** Settings ***
-Documentation       Tests for kristopherpepper.com
-Library             SeleniumLibrary
-Resource            ../Resources/HeaderAndFooter.robot
-Resource            ../Resources/HomePageTests.robot
-Resource            ../Resources/Coding.robot
-Resource            ../Resources/About.robot
-Resource            ../Resources/Contact.robot
+Documentation               Tests for kristopherpepper.com
+Library                     SeleniumLibrary
+Resource                    ../Resources/HeaderAndFooter.robot
+Resource                    ../Resources/HomePageTests.robot
+Resource                    ../Resources/Coding.robot
+Resource                    ../Resources/About.robot
+Resource                    ../Resources/Contact.robot
 
 *** Test Cases ***
 Test initialization
