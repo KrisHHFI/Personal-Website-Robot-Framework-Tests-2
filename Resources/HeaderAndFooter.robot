@@ -3,11 +3,10 @@ Documentation       Tests for the header and footer
 Library             SeleniumLibrary
 
 *** Keywords ***
-Test initialization
+Page navigation links
     open browser            https://kristopherpepper.com/     chrome
     Maximize Browser Window
 
-Page navigation links
     page should contain     Kristopher Pepper
     mouse over              //*[@id="topNav"]/nav/ul/li[1]/a
     mouse over              //*[@id="topNav"]/nav/ul/li[2]/a

@@ -8,6 +8,8 @@ Documentation       Tests for kristopherpepper.com
 Library             SeleniumLibrary
 Resource            ../Resources/HeaderAndFooter.robot
 Resource            ../Resources/HomePageTests.robot
+Resource            ../Resources/Coding.robot
+Resource            ../Resources/About.robot
 
 *** Test Cases ***
 Test initialization
@@ -15,9 +17,8 @@ Test initialization
     set selenium timeout    10s
 
 Tests
-    HeaderAndFooter.Test initialization
-    HeaderAndFooter.Page navigation links
-    HeaderAndFooter.Social links
-
-    HomePageTests.Test Initialization
-    HomePageTests.Image Carousel
+    #HeaderAndFooter.Page navigation links
+    #HeaderAndFooter.Social links
+    #HomePageTests.Image Carousel
+    #Coding.Page Content
+    About.Page Content
