@@ -10,6 +10,7 @@ Resource            ../Resources/HeaderAndFooter.robot
 Resource            ../Resources/HomePageTests.robot
 Resource            ../Resources/Coding.robot
 Resource            ../Resources/About.robot
+Resource            ../Resources/Contact.robot
 
 *** Test Cases ***
 Test initialization
@@ -17,8 +18,9 @@ Test initialization
     set selenium timeout    10s
 
 Tests
-    #HeaderAndFooter.Page navigation links
-    #HeaderAndFooter.Social links
-    #HomePageTests.Image Carousel
-    #Coding.Page Content
+    HeaderAndFooter.Page navigation links
+    HeaderAndFooter.Social links
+    HomePageTests.Image Carousel
+    Coding.Page Content
     About.Page Content
+    Contact.Page Content and Form
