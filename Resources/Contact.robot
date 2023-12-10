@@ -2,6 +2,13 @@
 Documentation                   Tests for the home page
 Library                         SeleniumLibrary
 
+*** Variables ***
+${FirstNameInputBox} =          id=name-yui_3_17_2_1_1527162484211_1002-fname-field
+${LastNameInputBox} =           id=name-yui_3_17_2_1_1527162484211_1002-lname-field
+${EmailNameInputBox} =          id=email-yui_3_17_2_1_1527162484211_1003-field
+${SubjectInputBox} =            id=text-yui_3_17_2_1_1527162484211_1004-field
+${MessageInputBox} =            id=textarea-yui_3_17_2_1_1527162484211_1005-field
+
 *** Keywords ***
 Page Content and Form
     open browser                https://kristopherpepper.com/contact     chrome
@@ -16,11 +23,11 @@ Page Content and Form
     page should contain         Viesti/Message
     page should contain         Submit/ Lähetä
 
-    Input Text                  id=name-yui_3_17_2_1_1527162484211_1002-fname-field    John
-    Input Text                  id=name-yui_3_17_2_1_1527162484211_1002-lname-field    Smith
-    Input Text                  id=email-yui_3_17_2_1_1527162484211_1003-field    johnsmith@johnsmith.com
-    Input Text                  id=text-yui_3_17_2_1_1527162484211_1004-field    A subject.
-    Input Text                  id=textarea-yui_3_17_2_1_1527162484211_1005-field    A message.
+    Input Text                  ${FirstNameInputBox}    John
+    Input Text                  ${LastNameInputBox}    Smith
+    Input Text                  ${EmailNameInputBox}    johnsmith@johnsmith.com
+    Input Text                  ${SubjectInputBox}    A subject.
+    Input Text                  ${MessageInputBox}    A message.
     click button                Submit/ Lähetä
     Sleep                       5s
 
