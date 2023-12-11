@@ -1,8 +1,10 @@
 *** Settings ***
 Documentation                   Tests for the home page
 Library                         SeleniumLibrary
+Resource                        ../Resources/HeaderAndFooter.robot
 
 *** Variables ***
+${ContactPageURL} =             https://kristopherpepper.com/contact
 ${FirstNameInputBox} =          id=name-yui_3_17_2_1_1527162484211_1002-fname-field
 ${LastNameInputBox} =           id=name-yui_3_17_2_1_1527162484211_1002-lname-field
 ${EmailNameInputBox} =          id=email-yui_3_17_2_1_1527162484211_1003-field
@@ -11,8 +13,10 @@ ${MessageInputBox} =            id=textarea-yui_3_17_2_1_1527162484211_1005-fiel
 
 *** Keywords ***
 Page Content and Form
-    open browser                https://kristopherpepper.com/contact     chrome
+    open browser                ${ContactPageURL}     chrome
     Maximize Browser Window
+
+    HeaderAndFooter.Test
 
     page should contain         Ota yhteyttä/Contact Kris
     page should contain         Täytä alla oleva lomake/Please complete the form below

@@ -14,20 +14,14 @@ ${YouTubeSocialLink} =          xpath=//a[@href='https://www.youtube.com/channel
 ${GitHubSocialLink} =           xpath=//a[@href='https://github.com/KrisHHFI']
 
 *** Keywords ***
-Page navigation links
-    open browser                https://kristopherpepper.com/     chrome
-    Maximize Browser Window
-
+Test
     page should contain         Kristopher Pepper
     mouse over                  ${PhotographyNavLink}
     mouse over                  ${CodingNavLink}
     mouse over                  ${AboutNavLink}
     mouse over                  ${ContactNavLink}
 
-Social links
     mouse over                  ${LinkedInSocialLink}
     mouse over                  ${ShutterStockSocialLink}
     mouse over                  ${YouTubeSocialLink}
     mouse over                  ${GitHubSocialLink}
-
-    Close Browser

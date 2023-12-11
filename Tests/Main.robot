@@ -17,8 +17,6 @@ Test initialization
     set selenium timeout    10s
 
 Tests
-    HeaderAndFooter.Page navigation links
-    HeaderAndFooter.Social links
     HomePageTests.Image Carousel
     Coding.Page Content
     About.Page Content
