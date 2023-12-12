@@ -14,13 +14,15 @@ ${YouTubeSocialLink} =          xpath=//a[@href='https://www.youtube.com/channel
 ${GitHubSocialLink} =           xpath=//a[@href='https://github.com/KrisHHFI']
 
 *** Keywords ***
-Test
+Header and Footer Tests
     page should contain         Kristopher Pepper
+    page should contain         Photographer & Junior Front-end Developer
     mouse over                  ${PhotographyNavLink}
     mouse over                  ${CodingNavLink}
     mouse over                  ${AboutNavLink}
     mouse over                  ${ContactNavLink}
 
+    page should contain         Copyright © 2017 Kristopher Pepper All Rights Reserved 
     mouse over                  ${LinkedInSocialLink}
     mouse over                  ${ShutterStockSocialLink}
     mouse over                  ${YouTubeSocialLink}

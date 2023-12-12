@@ -16,10 +16,9 @@ Page Content and Form
     open browser                ${ContactPageURL}     chrome
     Maximize Browser Window
 
-    HeaderAndFooter.Test
+    HeaderAndFooter.Header and Footer Tests
 
     page should contain         Ota yhteyttä/Contact Kris
-    page should contain         Täytä alla oleva lomake/Please complete the form below
     page should contain         First Name
     page should contain         Last Name
     page should contain         Sähköposti/Email Address
@@ -33,6 +32,8 @@ Page Content and Form
     Input Text                  ${SubjectInputBox}    A subject.
     Input Text                  ${MessageInputBox}    A message.
     click button                Submit/ Lähetä
+    Wait Until Page Contains    Thank you for your message.    timeout=10s
+
     Sleep                       5s
 
     Close Browser

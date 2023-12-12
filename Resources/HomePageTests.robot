@@ -1,21 +1,21 @@
 *** Settings ***
-Documentation                   Tests for the home page
-Library                         SeleniumLibrary
-Resource                        ../Resources/HeaderAndFooter.robot
+Documentation               Tests for the home page
+Library                     SeleniumLibrary
+Resource                    ../Resources/HeaderAndFooter.robot
 
 *** Variables ***
-${HomePageURL} =                    https://kristopherpepper.com/
-${CarouselLeftButton} =         xpath=//a[@aria-label='Previous Slide']
-${CarouselRightButton} =        xpath=//a[@aria-label='Next Slide']
+${HomePageURL} =            https://kristopherpepper.com/
+${CarouselLeftButton} =     xpath=//a[@aria-label='Previous Slide']
+${CarouselRightButton} =    xpath=//a[@aria-label='Next Slide']
 
 *** Keywords ***
-Image Carousel
-    open browser                ${HomePageURL}     chrome
+Home Page Tests
+    open browser            ${HomePageURL}     chrome
     Maximize Browser Window
 
-    HeaderAndFooter.Test
+    HeaderAndFooter.Header and Footer Tests
 
-    Click Element               ${CarouselLeftButton}
-    Click Element               ${CarouselRightButton}
+    Repeat Keyword	        5 times     Click Element               ${CarouselLeftButton}
+    Repeat Keyword	        5 times     Click Element               ${CarouselRightButton}
 
     Close Browser

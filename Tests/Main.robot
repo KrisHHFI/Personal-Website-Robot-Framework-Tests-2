@@ -17,7 +17,7 @@ Test initialization
     set selenium timeout    10s
 
 Tests
-    HomePageTests.Image Carousel
+    HomePageTests.Home Page Tests
     Coding.Page Content
     About.Page Content
     Contact.Page Content and Form
