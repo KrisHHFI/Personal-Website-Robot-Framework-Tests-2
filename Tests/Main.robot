@@ -6,7 +6,10 @@
 Documentation               Tests for kristopherpepper.com
 Library                     SeleniumLibrary
 Resource                    ../Resources/HeaderAndFooter.robot
-Resource                    ../Resources/HomePageTests.robot
+Resource                    ../Resources/Photography/HomePage.robot
+Resource                    ../Resources/Photography/BandPhotos.robot
+Resource                    ../Resources/Photography/Prints.robot
+Resource                    ../Resources/Photography/Clients.robot
 Resource                    ../Resources/Coding.robot
 Resource                    ../Resources/About.robot
 Resource                    ../Resources/Contact.robot
@@ -17,7 +20,10 @@ Test initialization
     set selenium timeout    10s
 
 Tests
-    HomePageTests.Home Page Tests
+    HomePage.Home Page Tests
+    BandPhotos.Band Photos Page Tests
+    Prints.Prints Page Tests
+    Clients.Clients Page Tests
     Coding.Page Content
     About.Page Content
     Contact.Page Content and Form

@@ -32,7 +32,7 @@ Page Content and Form
     Input Text                  ${SubjectInputBox}    A subject.
     Input Text                  ${MessageInputBox}    A message.
     click button                Submit/ Lähetä
-    Wait Until Page Contains    Thank you for your message.    timeout=10s
+    Wait Until Page Contains    Thank you for your message.    timeout=5s
 
     Sleep                       5s
 
