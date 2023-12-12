@@ -3,7 +3,7 @@
 <img src="" height="400"/>
 <img src="" height="400"/>
 
-Check out the [demo video]().
+Check out the [demo video](https://youtu.be/6Avcf4xh6cw).
 
 ### About
 
